@@ -1,0 +1,29 @@
+.banner {
+  position: relative;
+  height: rem(63);
+  background: var(--grey-10);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+  &__button-close {
+    @include reset-btn;
+    --size: #{rem(32)};
+    --icon-size: #{rem(24)};
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    right: rem(32);
+    background: var(--white-10);
+    border-radius: 100vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: var(--icon-size);
+      height: var(--icon-size);
+    }
+  }
+}
