@@ -19,7 +19,7 @@ const Header = () => {
         />
         <nav className={styles["header__nav"]}>
           <ul className={styles["header__menu"]}>
-            {menu.map(({ name, href }) => (
+            {menu.map(({ name }) => (
               <li className={styles["header__menu-item"]} key={name}>
                 <Button>{name}</Button>
               </li>
