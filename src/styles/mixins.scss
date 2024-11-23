@@ -1,7 +1,7 @@
 @use "sass:math";
 
 @function rem($px, $context: 16) {
-  @return calc(round(calc($px / $context) * 1rem * 10000) / 10000);
+  @return calc(math.round(calc($px / $context) * 1rem * 10000) / 10000);
 }
 
 @mixin reset-btn {
@@ -16,7 +16,7 @@
 }
 
 @function vw($px, $width: 1920) {
-  @return calc(round(math.div($px, $width) * 100vw * 10000) / 10000);
+  @return calc(math.round(math.div($px, $width) * 100vw * 10000) / 10000);
 }
 
 @mixin letter-spacing-em($letter-spacing-px, $font-size-px) {
