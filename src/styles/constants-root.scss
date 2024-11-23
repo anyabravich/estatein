@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 :root {
   // 🌈 COLORS
   --black: #000000;
@@ -5,6 +7,7 @@
   --white-10: rgba(255, 255, 255, 0.1);
 
   --grey-10: #1a1a1a;
+  --grey-08: #141414;
 
   // 🆎 FONTS
   --default-font-style: normal;

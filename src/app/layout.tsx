@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "@/styles/styles.scss";
+import Header from "@/components/Header";
+import Banner from "@/components/Banner";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -19,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.variable}`}>{children}</body>
+      <body className={`${urbanist.variable}`}>
+        <Banner />
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

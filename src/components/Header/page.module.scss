@@ -1,0 +1,7 @@
+.header {
+  background: var(--grey-10);
+  &__logo {
+    width: rem(160);
+    height: rem(49);
+  }
+}
