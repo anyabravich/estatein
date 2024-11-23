@@ -1,7 +1,21 @@
 .header {
   background: var(--grey-10);
+  &__container {
+    height: rem(99);
+    padding-block: rem(20);
+    display: flex;
+    align-items: center;
+  }
   &__logo {
     width: rem(160);
     height: rem(49);
+  }
+  &__nav {
+    margin-inline: auto;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
   }
 }

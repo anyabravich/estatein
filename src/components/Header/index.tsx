@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./page.module.scss";
 import Container from "../Container";
 import Image from "next/image";
+import Button from "../Button";
+import { menu } from "./data";
 
 const Header = () => {
   return (
@@ -15,6 +17,15 @@ const Header = () => {
           height={49}
           priority
         />
+        <nav className={styles["header__nav"]}>
+          <ul className={styles["header__menu"]}>
+            {menu.map(({ name, href }) => (
+              <li className={styles["header__menu-item"]} key={name}>
+                <Button>{name}</Button>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </Container>
     </header>
   );
