@@ -2,6 +2,7 @@ export const menu = [
   {
     name: "Home",
     href: "/",
+    isActive: true,
   },
   {
     name: "About Us",

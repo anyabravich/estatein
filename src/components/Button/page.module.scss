@@ -1,5 +1,15 @@
 .button {
-  &.small {
-    display: none;
+  @include reset-btn;
+  padding: rem(14) rem(24);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-500);
+  border: 1px solid transparent;
+  &._active {
+    border-radius: rem(10);
+    background: var(--grey-08);
+    border-color: var(--grey-15);
+  }
+  &._big {
+    display: none !important;
   }
 }
