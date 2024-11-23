@@ -13,6 +13,7 @@ const Header = () => {
           alt="logo"
           width={160}
           height={49}
+          priority
         />
       </Container>
     </header>
