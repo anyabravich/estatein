@@ -6,15 +6,24 @@ interface IButton {
   children: ReactNode;
   className?: string;
   isActive?: boolean;
+  size?: "small" | "medium" | "big";
+  styled?: "primary" | "secondary";
   onClick?: () => void;
 }
 
-const Button = ({ children, className, isActive, onClick }: IButton) => {
+const Button = ({
+  children,
+  className,
+  size,
+  styled,
+  isActive,
+  onClick,
+}: IButton) => {
   return (
     <button
       className={`${styles["button"]} ${className && styles[className]} ${
-        isActive && styles["_active"]
-      }`}
+        size && styles[size]
+      } ${styled && styles[styled]} ${isActive && styles["active"]}`}
       type="button"
       onClick={onClick}
     >

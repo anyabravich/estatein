@@ -30,9 +30,9 @@ html {
 body {
   font-family: var(--ff-default);
   font-style: var(--default-font-style);
-  font-size: var(--default-font-size);
-  line-height: var(--default-line-height);
-  font-weight: var(--default-font-weight);
+  font-size: var(--font-size-18);
+  line-height: 1.5;
+  font-weight: var(--font-weight-500);
   color: var(--white);
   background: var(--grey-08);
   display: flex;
