@@ -10,7 +10,7 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   overflow-y: auto;
 }
 
@@ -45,4 +45,5 @@ ul {
 
 a {
   color: inherit;
+  text-decoration: none;
 }

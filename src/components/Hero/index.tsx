@@ -32,8 +32,8 @@ const Hero = () => {
           <Image
             src="/images/hero.jpg"
             alt="hero"
-            objectFit="cover"
-            objectPosition="top"
+            style={{ objectPosition: "top", objectFit: "cover" }}
+            sizes="100%"
             fill
             priority
           />
