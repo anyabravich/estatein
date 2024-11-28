@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import Button from "../Button";
 
-const Card = () => {
+const Card = ({ item }: any) => {
   return (
     <article className={styles["card"]}>
       <div className={styles["card__image-wrapper"]}>
@@ -16,7 +16,7 @@ const Card = () => {
           priority
         />
       </div>
-      <h3 className={styles["card__title"]}>Seaside Serenity Villa</h3>
+      <h3 className={styles["card__title"]}>{item} Seaside Serenity Villa</h3>
       <p className={styles["card__description"]}>
         A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban
         neighborhood... Read More
