@@ -10,6 +10,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import { FeaturedData } from "./data";
 
 const Featured = () => {
   const prevRef = useRef(null);
@@ -41,11 +42,19 @@ const Featured = () => {
           }}
           modules={[Navigation]}
         >
-          {[...Array(16)].map((item, index) => (
-            <SwiperSlide key={index}>
-              <Card item={index} />
-            </SwiperSlide>
-          ))}
+          {FeaturedData.map(
+            ({ image, title, description, list, price }, index) => (
+              <SwiperSlide key={index}>
+                <Card
+                  image={image}
+                  title={title}
+                  description={description}
+                  list={list}
+                  price={price}
+                />
+              </SwiperSlide>
+            )
+          )}
         </Swiper>
         <div className={styles["featured__navigation"]}>
           <p className={styles["featured__navigation-count"]}>
