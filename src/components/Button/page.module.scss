@@ -12,8 +12,12 @@
   &.primary {
     background: var(--purple-60);
   }
-  &.secondary {
+  &.outline {
     background: var(--grey-08);
+    border-color: var(--grey-15);
+  }
+  &.secondary {
+    background: var(--grey-10);
     border-color: var(--grey-15);
   }
 }

@@ -19,7 +19,7 @@ const Hero = () => {
             Explore our listings to&nbsp;find the home that matches your dreams.
           </p>
           <div className={styles["hero__buttons"]}>
-            <Button styled="secondary">Learn More</Button>
+            <Button styled="outline">Learn More</Button>
             <Button styled="primary">Browse Properties</Button>
           </div>
           <ul className={styles["hero__info"]}>

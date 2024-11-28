@@ -1,3 +1,4 @@
+import Featured from "@/components/Featured";
 import Hero from "@/components/Hero";
 import Possibilities from "@/components/Possibilities";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Possibilities />
+      <Featured />
     </>
   );
 }

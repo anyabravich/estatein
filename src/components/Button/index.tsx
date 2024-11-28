@@ -7,7 +7,7 @@ interface IButton {
   className?: string;
   isActive?: boolean;
   size?: "small" | "medium" | "big";
-  styled?: "primary" | "secondary";
+  styled?: "primary" | "secondary" | "outline";
   onClick?: () => void;
 }
 

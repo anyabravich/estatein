@@ -1,0 +1,15 @@
+.heading {
+  margin-bottom: rem(80);
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-bottom: rem(14);
+  }
+  &__description {
+    color: var(--grey-60);
+    max-width: rem(1200);
+  }
+}
