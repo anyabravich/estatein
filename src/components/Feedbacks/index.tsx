@@ -1,18 +1,17 @@
 "use client";
 import React, { useRef, useState } from "react";
 import styles from "./page.module.scss";
-import Heading from "../Heading";
 import Container from "../Container";
-import Card from "../Card";
-import { FeaturedData } from "./data";
+import Heading from "../Heading";
 import SliderNavigation from "../SliderNavigation";
-
+import Feedback from "../Feedback";
+import { FeedbacksData } from "./data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const Featured = () => {
+const Feedbacks = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -20,12 +19,12 @@ const Featured = () => {
   const [totalSlides, setTotalSlides] = useState(0);
 
   return (
-    <section className={styles["featured"]}>
-      <Container className={styles["featured__container"]}>
+    <section className={styles["feedbacks"]}>
+      <Container className={styles["feedbacks__container"]}>
         <Heading
-          title="Featured Properties"
-          buttonText="View All Properties"
-          description="Explore our handpicked selection of&nbsp;featured properties. Each listing offers a&nbsp;glimpse into exceptional homes and investments available through Estatein. Click &laquo;View Details&raquo; for more information."
+          title="What Our Clients Say"
+          description="Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs."
+          buttonText="View All Testimonials"
         />
         <Swiper
           slidesPerView={3}
@@ -42,19 +41,16 @@ const Featured = () => {
           }}
           modules={[Navigation]}
         >
-          {FeaturedData.map(
-            ({ image, title, description, list, price }, index) => (
-              <SwiperSlide key={index}>
-                <Card
-                  image={image}
-                  title={title}
-                  description={description}
-                  list={list}
-                  price={price}
-                />
-              </SwiperSlide>
-            )
-          )}
+          {FeedbacksData.map((feedback, index) => (
+            <SwiperSlide key={index}>
+              <Feedback
+                stars={feedback.stars}
+                title={feedback.title}
+                text={feedback.text}
+                author={feedback.author}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
         <SliderNavigation
           currentSlide={currentSlide}
@@ -67,4 +63,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default Feedbacks;
