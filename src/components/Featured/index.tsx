@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { FeaturedData } from "./data";
+import SliderNavigation from "../SliderNavigation";
 
 const Featured = () => {
   const prevRef = useRef(null);
@@ -57,34 +58,12 @@ const Featured = () => {
             )
           )}
         </Swiper>
-        <div className={styles["featured__navigation"]}>
-          <p className={styles["featured__navigation-count"]}>
-            {currentSlide < 10 ? `0${currentSlide}` : currentSlide}{" "}
-            <span>of {totalSlides < 10 ? `0${totalSlides}` : totalSlides}</span>
-          </p>
-          <div className={styles["featured__navigation-buttons"]}>
-            <div ref={prevRef} className="swiper-button-prev">
-              <Image
-                className={styles["featured__navigation-button-icon"]}
-                src="/icons/arrow.svg"
-                alt="arrow"
-                width={30}
-                height={30}
-                priority
-              />
-            </div>
-            <div ref={nextRef} className="swiper-button-next">
-              <Image
-                className={styles["featured__navigation-button-icon"]}
-                src="/icons/arrow.svg"
-                alt="arrow"
-                width={30}
-                height={30}
-                priority
-              />
-            </div>
-          </div>
-        </div>
+        <SliderNavigation
+          currentSlide={currentSlide}
+          totalSlides={totalSlides}
+          prevRef={prevRef}
+          nextRef={nextRef}
+        />
       </Container>
     </section>
   );
