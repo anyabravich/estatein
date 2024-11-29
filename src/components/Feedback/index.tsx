@@ -27,6 +27,7 @@ const Feedback = ({
         {[...Array(stars)].map((_, index) => (
           <li key={index}>
             <Image
+              className={styles["feedback__star"]}
               src="/icons/star.svg"
               alt="star"
               width={24}

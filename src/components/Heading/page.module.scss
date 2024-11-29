@@ -1,16 +1,16 @@
 .heading {
   margin-bottom: rem(76);
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
   &__stars {
     display: inline-block;
     width: rem(69);
     height: rem(30);
     margin-bottom: rem(11);
     margin-left: rem(-20);
-  }
-  &__grid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
   &__title {
     margin-bottom: rem(12);

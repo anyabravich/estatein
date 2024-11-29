@@ -16,9 +16,11 @@ const Heading = ({ title, description, buttonText, className }: IHeading) => {
       <i className={styles["heading__stars"]}>
         <Image src="/icons/stars.svg" alt="stars" width={69} height={30} />
       </i>
-      <h2 className={`${styles["heading__title"]} h2`}>{title}</h2>
-      <div className={styles["heading__grid"]}>
-        <p className={styles["heading__description"]}>{description}</p>
+      <div className={styles["heading__content"]}>
+        <div className={styles["heading__text-content"]}>
+          <h2 className={`${styles["heading__title"]} h2`}>{title}</h2>
+          <p className={styles["heading__description"]}>{description}</p>
+        </div>
         <Button className="secondary">{buttonText}</Button>
       </div>
     </header>
