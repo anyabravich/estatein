@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
@@ -12,6 +13,8 @@ interface ICard {
 }
 
 const Card = ({ image, title, description, list, price }: ICard) => {
+  const [showMore, setShowMore] = React.useState(false);
+
   return (
     <article className={styles["card"]}>
       <div className={styles["card__image-wrapper"]}>
@@ -25,7 +28,21 @@ const Card = ({ image, title, description, list, price }: ICard) => {
         />
       </div>
       <h3 className={styles["card__title"]}>{title}</h3>
-      <p className={styles["card__description"]}>{description}</p>
+      <p className={styles["card__description"]}>
+        <span
+          className={`${styles["card__description-text"]} ${
+            showMore && styles["showed"]
+          }`}
+        >
+          {description}
+        </span>
+        <button
+          className={styles["card__read-more"]}
+          onClick={() => setShowMore(!showMore)}
+        >
+          {showMore ? "Read Less" : "Read More"}
+        </button>
+      </p>
       <ul className={styles["card__components"]}>
         {list.map((item, index) => (
           <li className={styles["card__component"]} key={index}>

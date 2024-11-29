@@ -1,7 +1,10 @@
 .card {
   padding: rem(40);
   border-radius: rem(12);
+  height: 100%;
   border: 1px solid var(--grey-15);
+  display: flex;
+  flex-direction: column;
   &__image-wrapper {
     width: rem(432);
     height: rem(318);
@@ -15,8 +18,23 @@
     margin-bottom: rem(6);
   }
   &__description {
-    color: var(--grey-60);
     margin-bottom: rem(30);
+  }
+  &__description-text {
+    overflow: hidden;
+    color: var(--grey-60);
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    &.showed {
+      -webkit-line-clamp: unset;
+    }
+  }
+  &__read-more {
+    @include reset-btn;
+    display: inline-block;
+    margin-top: rem(10);
   }
   &__components {
     display: flex;
@@ -43,6 +61,7 @@
     display: flex;
     gap: rem(50);
     justify-content: space-between;
+    margin-top: auto;
   }
   &__price {
     display: flex;
