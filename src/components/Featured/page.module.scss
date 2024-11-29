@@ -7,14 +7,14 @@
   &__navigation {
     display: flex;
     height: rem(69);
-    padding-top: rem(20);
+    padding-top: rem(16);
     border-top: 1px solid var(--grey-15);
   }
   &__navigation-buttons {
     position: relative;
     margin-left: auto;
     display: flex;
-    gap: rem(20);
+    gap: rem(10);
   }
   &__navigation-count {
     span {

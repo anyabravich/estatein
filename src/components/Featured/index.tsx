@@ -24,6 +24,7 @@ const Featured = () => {
       <Container className={styles["featured__container"]}>
         <Heading
           title="Featured Properties"
+          buttonText="View All Properties"
           description="Explore our handpicked selection of&nbsp;featured properties. Each listing offers a&nbsp;glimpse into exceptional homes and investments available through Estatein. Click &laquo;View Details&raquo; for more information."
         />
         <Swiper
@@ -58,7 +59,8 @@ const Featured = () => {
         </Swiper>
         <div className={styles["featured__navigation"]}>
           <p className={styles["featured__navigation-count"]}>
-            {currentSlide} <span>of {totalSlides}</span>
+            {currentSlide < 10 ? `0${currentSlide}` : currentSlide}{" "}
+            <span>of {totalSlides < 10 ? `0${totalSlides}` : totalSlides}</span>
           </p>
           <div className={styles["featured__navigation-buttons"]}>
             <div ref={prevRef} className="swiper-button-prev">

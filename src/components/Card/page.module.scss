@@ -11,6 +11,7 @@
     margin-bottom: rem(30);
   }
   &__title {
+    font-size: var(--font-size-24);
     margin-bottom: rem(6);
   }
   &__description {
@@ -19,6 +20,7 @@
   }
   &__components {
     display: flex;
+    flex-wrap: wrap;
     gap: rem(10);
     margin-bottom: rem(30);
   }
@@ -27,9 +29,10 @@
     align-items: center;
     gap: rem(4);
     border-radius: rem(28);
-    padding: rem(8) rem(14);
+    padding: rem(8) rem(12);
     background: var(--grey-10);
     border: 1px solid var(--grey-15);
+    white-space: nowrap;
   }
   &__component-icon {
     --size: #{rem(24)};
@@ -38,6 +41,7 @@
   }
   &__footer {
     display: flex;
+    gap: rem(50);
     justify-content: space-between;
   }
   &__price {
