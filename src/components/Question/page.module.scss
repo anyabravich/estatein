@@ -1,0 +1,16 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: rem(50);
+  gap: rem(30);
+  border-radius: rem(12);
+  border: 1px solid var(--grey-15);
+  &__answer {
+    color: var(--grey-60);
+  }
+  &__button-wrapper {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+}

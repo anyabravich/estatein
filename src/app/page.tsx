@@ -2,6 +2,7 @@ import Featured from "@/components/Featured";
 import Feedbacks from "@/components/Feedbacks";
 import Hero from "@/components/Hero";
 import Possibilities from "@/components/Possibilities";
+import Questions from "@/components/Questions";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Possibilities />
       <Featured />
       <Feedbacks />
+      <Questions />
     </>
   );
 }
