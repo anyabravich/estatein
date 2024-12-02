@@ -1,3 +1,4 @@
+import CTA from "@/components/CTA";
 import Featured from "@/components/Featured";
 import Feedbacks from "@/components/Feedbacks";
 import Hero from "@/components/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <Featured />
       <Feedbacks />
       <Questions />
+      <CTA />
     </>
   );
 }

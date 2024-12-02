@@ -1,0 +1,16 @@
+.cta {
+  padding-block: rem(100);
+  background: url("/images/cta/bg.svg") no-repeat top / cover;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: rem(14);
+  }
+  &__text {
+    max-width: rem(1154);
+    color: var(--grey-60);
+  }
+}
