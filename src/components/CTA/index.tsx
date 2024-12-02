@@ -12,12 +12,12 @@ const CTA = () => {
             Start Your Real Estate Journey Today
           </h2>
           <p className={styles["cta__text"]}>
-            Your dream property is just a click away. Whether you're looking for
-            a new home, a strategic investment, or expert real estate advice,
-            Estatein is here to assist you every step of the way. Take the first
-            step towards your real estate goals and explore our available
-            properties or get in touch with our team for personalized
-            assistance.
+            Your dream property is&nbsp;just a&nbsp;click away. Whether
+            you&rsquo;re looking for a&nbsp;new home, a&nbsp;strategic
+            investment, or&nbsp;expert real estate advice, Estatein is&nbsp;here
+            to&nbsp;assist you every step of&nbsp;the way. Take the first step
+            towards your real estate goals and explore our available properties
+            or&nbsp;get in&nbsp;touch with our team for personalized assistance.
           </p>
         </div>
         <Button styled="primary">Explore Properties</Button>
