@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import "@/styles/styles.scss";
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Banner />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
