@@ -3,13 +3,12 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 
 interface IInput {
-  label: string;
   type: "checkbox" | "radio" | "text";
   className?: string;
   name?: string;
 }
 
-const Input = ({ label, type, className, name }: IInput) => {
+const Input = ({ type, className, name }: IInput) => {
   return (
     <label className={`${styles["input"]} ${className && styles[className]}`}>
       <Image

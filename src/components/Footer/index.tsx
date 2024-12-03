@@ -21,7 +21,7 @@ const Footer = () => {
               priority
             />
             <form className={styles["footer__form"]} action="#">
-              <Input type="text" label="Subscribe to our newsletter" />
+              <Input type="text" />
             </form>
           </div>
           <ul className={styles["footer__menu"]}>
