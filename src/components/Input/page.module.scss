@@ -1,0 +1,70 @@
+.input {
+  $this: &;
+  position: relative;
+  max-width: rem(423);
+  height: rem(66);
+  border-radius: rem(15);
+  padding: rem(18) rem(24);
+  padding-left: rem(60);
+  border: 1px solid var(--grey-15);
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  &._radio {
+    #{$this}__box {
+      border-radius: 50%;
+    }
+    #{$this}__input:checked + #{$this}__box {
+      background: none;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(8);
+        height: rem(8);
+        border-radius: 50%;
+        background: var(--green-brand);
+      }
+    }
+  }
+  &__icon {
+    --size: #{rem(24)};
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: 50%;
+    left: rem(24);
+    transform: translateY(-50%);
+  }
+  &__button {
+    @include reset-btn;
+    position: absolute;
+    top: 50%;
+    right: rem(22);
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__button-icon {
+    --size: #{rem(30)};
+    width: var(--size);
+    height: var(--size);
+  }
+  &__input {
+    width: calc(100% - rem(116));
+    height: 100%;
+    position: absolute;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--white);
+    font-size: var(--font-size-18);
+    &::-webkit-input-placeholder {
+      font-size: var(--font-size-18);
+    }
+  }
+}

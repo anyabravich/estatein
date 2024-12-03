@@ -4,13 +4,14 @@ import Container from "../Container";
 import Image from "next/image";
 import Link from "next/link";
 import { FooterDataMenu, FooterDataSocial } from "./data";
+import Input from "../Input";
 
 const Footer = () => {
   return (
     <footer className={styles["footer"]}>
       <div className={styles["footer__main"]}>
         <Container className={styles["footer__main-container"]}>
-          <div>
+          <div className={styles["footer__main-content"]}>
             <Image
               className={styles["footer__logo"]}
               src="/logo.svg"
@@ -19,6 +20,9 @@ const Footer = () => {
               height={48}
               priority
             />
+            <form className={styles["footer__form"]} action="#">
+              <Input type="text" label="Subscribe to our newsletter" />
+            </form>
           </div>
           <ul className={styles["footer__menu"]}>
             {FooterDataMenu.map((item, index) => (

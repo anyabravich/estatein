@@ -22,6 +22,11 @@
       margin-bottom: 0;
     }
   }
+  &__main-content {
+    display: flex;
+    gap: rem(30);
+    flex-direction: column;
+  }
   &__logo {
     width: rem(160);
     height: rem(49);
