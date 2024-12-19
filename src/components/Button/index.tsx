@@ -1,6 +1,7 @@
 "use client";
 import { ReactNode } from "react";
 import styles from "./page.module.scss";
+import clsx from "clsx";
 
 interface IButton {
   children: ReactNode;
@@ -23,11 +24,14 @@ const Button = ({
 }: IButton) => {
   return (
     <button
-      className={`${styles["button"]} ${className && styles[className]} ${
-        size && styles[size]
-      } ${styled && styles[styled]} ${isActive && styles["active"]} ${
-        isFulled && styles["fulled"]
-      }`}
+      className={clsx(
+        styles["button"],
+        className && className,
+        size && styles[size],
+        styled && styles[styled],
+        isActive && styles.active,
+        isFulled && styles.fulled
+      )}
       type="button"
       onClick={onClick}
     >

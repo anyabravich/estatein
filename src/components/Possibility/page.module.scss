@@ -9,6 +9,7 @@
   gap: rem(20);
   border-radius: rem(12);
   border: 1px solid var(--grey-15);
+  height: 100%;
   &__arrow {
     --size: #{rem(32)};
     width: var(--size);

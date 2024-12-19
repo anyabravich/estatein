@@ -7,6 +7,10 @@
   flex-direction: column;
   gap: rem(2);
   min-width: rem(239);
+  @media (max-width: $tablet) {
+    flex-grow: 1;
+    text-align: center;
+  }
   &__value {
     line-height: 1.5;
     font-size: var(--font-size-40);

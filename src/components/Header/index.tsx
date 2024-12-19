@@ -34,7 +34,9 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <Button isActive>Contact Us</Button>
+        <div className={styles["header__contact"]}>
+          <Button isActive>Contact Us</Button>
+        </div>
       </Container>
     </header>
   );

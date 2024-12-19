@@ -21,7 +21,12 @@ const Heading = ({ title, description, buttonText, className }: IHeading) => {
           <h2 className={`${styles["heading__title"]} h2`}>{title}</h2>
           <p className={styles["heading__description"]}>{description}</p>
         </div>
-        <Button className="secondary">{buttonText}</Button>
+        <Button
+          className={styles["heading__button-wrapper"]}
+          styled="secondary"
+        >
+          {buttonText}
+        </Button>
       </div>
     </header>
   );

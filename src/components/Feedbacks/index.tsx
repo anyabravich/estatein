@@ -27,8 +27,15 @@ const Feedbacks = () => {
           buttonText="View All Testimonials"
         />
         <Swiper
-          slidesPerView={3}
           spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,

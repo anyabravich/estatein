@@ -12,9 +12,17 @@
   }
   &__nav {
     margin-inline: auto;
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
   &__menu {
     display: flex;
     align-items: center;
+  }
+  &__contact {
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 }

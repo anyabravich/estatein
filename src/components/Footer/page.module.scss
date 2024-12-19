@@ -4,10 +4,18 @@
     gap: rem(80);
     padding-block: rem(100);
     grid-template-columns: rem(538) 1fr;
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__menu {
     display: flex;
     gap: rem(100);
+    @media (max-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__menu-item {
     letter-spacing: -0.108px;
@@ -39,14 +47,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
   }
   &__information {
     display: flex;
     gap: rem(38);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+      gap: rem(10);
+    }
   }
   &__socials {
     display: flex;
     gap: rem(10);
+    @media (max-width: $tablet) {
+      order: -1;
+    }
   }
   &__socials-item {
     --size: #{rem(52)};

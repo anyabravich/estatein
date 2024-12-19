@@ -62,7 +62,7 @@ const Card = ({ image, title, description, list, price }: ICard) => {
           <span className={styles["card__price-label"]}>Price</span>
           <span className={styles["card__price-value"]}>{price}</span>
         </p>
-        <Button className="primary" isFulled={true}>
+        <Button styled="primary" isFulled={true}>
           View Property Details
         </Button>
       </footer>

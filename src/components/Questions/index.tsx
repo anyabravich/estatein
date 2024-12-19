@@ -27,8 +27,15 @@ const Questions = () => {
           buttonText="View All FAQ’s"
         />
         <Swiper
-          slidesPerView={3}
           spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,

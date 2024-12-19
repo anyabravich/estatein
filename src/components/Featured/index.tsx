@@ -28,8 +28,15 @@ const Featured = () => {
           description="Explore our handpicked selection of&nbsp;featured properties. Each listing offers a&nbsp;glimpse into exceptional homes and investments available through Estatein. Click &laquo;View Details&raquo; for more information."
         />
         <Swiper
-          slidesPerView={3}
           spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,

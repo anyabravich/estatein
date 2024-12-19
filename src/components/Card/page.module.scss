@@ -6,8 +6,7 @@
   display: flex;
   flex-direction: column;
   &__image-wrapper {
-    width: rem(432);
-    height: rem(318);
+    aspect-ratio: 432 / 318;
     position: relative;
     border-radius: rem(10);
     overflow: hidden;

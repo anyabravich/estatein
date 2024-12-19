@@ -5,6 +5,11 @@
     gap: rem(80);
     align-items: flex-start;
     grid-template-columns: rem(758) 1fr;
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: initial;
+    }
   }
   &__image {
     height: rem(814);
@@ -29,5 +34,8 @@
   &__info {
     display: flex;
     gap: rem(20);
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
   }
 }
