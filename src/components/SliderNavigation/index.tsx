@@ -1,13 +1,7 @@
 import React from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
-
-interface ISliderNavigation {
-  currentSlide: number;
-  totalSlides: number;
-  prevRef: React.RefObject<HTMLDivElement>;
-  nextRef: React.RefObject<HTMLDivElement>;
-}
+import { ISliderNavigation } from "./types";
 
 const SliderNavigation = ({
   currentSlide,
@@ -22,7 +16,7 @@ const SliderNavigation = ({
         <span>of {totalSlides < 10 ? `0${totalSlides}` : totalSlides}</span>
       </p>
       <div className={styles["slider-navigation__buttons"]}>
-        <div ref={prevRef} className="swiper-button-prev">
+        <button ref={prevRef} className="swiper-button-prev" type="button">
           <Image
             className={styles["slider-navigation__button-icon"]}
             src="/icons/arrow.svg"
@@ -31,8 +25,8 @@ const SliderNavigation = ({
             height={30}
             priority
           />
-        </div>
-        <div ref={nextRef} className="swiper-button-next">
+        </button>
+        <button ref={nextRef} className="swiper-button-next" type="button">
           <Image
             className={styles["slider-navigation__button-icon"]}
             src="/icons/arrow.svg"
@@ -41,7 +35,7 @@ const SliderNavigation = ({
             height={30}
             priority
           />
-        </div>
+        </button>
       </div>
     </div>
   );

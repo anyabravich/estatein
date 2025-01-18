@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "./page.module.scss";
 import Button from "../Button";
-
-interface IQuestion {
-  question: string;
-  answer: string;
-}
+import { IQuestion } from "./types";
 
 const Question = ({ question, answer }: IQuestion) => {
   return (

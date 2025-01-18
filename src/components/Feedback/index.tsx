@@ -1,19 +1,7 @@
 import React from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
-
-interface IAuthor {
-  name: string;
-  location: string;
-  image: string;
-}
-
-interface IFeedback {
-  stars: number;
-  title: string;
-  text: string;
-  author: IAuthor;
-}
+import { IFeedback } from "./types";
 
 const Feedback = ({
   stars,

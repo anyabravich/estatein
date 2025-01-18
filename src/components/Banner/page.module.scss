@@ -10,6 +10,9 @@
   border-bottom: 1px solid var(--grey-15);
   font-size: var(--font-size-18);
   font-weight: var(--font-weight-500);
+  &._hidden {
+    display: none;
+  }
   &__button-close {
     @include reset-btn;
     --size: #{rem(32)};
@@ -23,6 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
     img {
       width: var(--icon-size);
       height: var(--icon-size);

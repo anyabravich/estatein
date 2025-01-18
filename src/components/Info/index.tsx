@@ -1,10 +1,6 @@
-import React from "react";
-import styles from "./page.module.scss";
+import { IInfo } from "./types";
 
-interface IInfo {
-  value: string;
-  text: string;
-}
+import styles from "./page.module.scss";
 
 const Info = ({ value, text }: IInfo) => {
   return (

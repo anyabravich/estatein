@@ -1,19 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
 import Button from "../Button";
-
-interface ICard {
-  image: string;
-  title: string;
-  description: string;
-  list: string[];
-  price: string;
-}
+import { ICard } from "./types";
 
 const Card = ({ image, title, description, list, price }: ICard) => {
-  const [showMore, setShowMore] = React.useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <article className={styles["card"]}>

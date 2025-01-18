@@ -1,12 +1,8 @@
-import React from "react";
-import styles from "./page.module.scss";
+import { IInput } from "./types";
+
 import Image from "next/image";
 
-interface IInput {
-  type: "checkbox" | "radio" | "text";
-  className?: string;
-  name?: string;
-}
+import styles from "./page.module.scss";
 
 const Input = ({ type, className, name }: IInput) => {
   return (

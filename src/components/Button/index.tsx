@@ -1,17 +1,8 @@
 "use client";
-import { ReactNode } from "react";
+
 import styles from "./page.module.scss";
 import clsx from "clsx";
-
-interface IButton {
-  children: ReactNode;
-  className?: string;
-  isActive?: boolean;
-  isFulled?: boolean;
-  size?: "small" | "medium" | "big";
-  styled?: "primary" | "secondary" | "outline";
-  onClick?: () => void;
-}
+import { IButton } from "./types";
 
 const Button = ({
   children,

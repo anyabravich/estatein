@@ -1,11 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./page.module.scss";
-
-interface IPossibility {
-  image: string;
-  text: string;
-}
+import { IPossibility } from "./types";
 
 const Possibility = ({ image, text }: IPossibility) => {
   return (

@@ -2,13 +2,7 @@ import React from "react";
 import styles from "./page.module.scss";
 import Button from "../Button";
 import Image from "next/image";
-
-interface IHeading {
-  title: string;
-  description: string;
-  buttonText?: string;
-  className?: string;
-}
+import { IHeading } from "./types";
 
 const Heading = ({ title, description, buttonText, className }: IHeading) => {
   return (
