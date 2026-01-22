@@ -1,6 +1,6 @@
 # 🏠 Estatein
 
-<img src="https://i.ibb.co/27mNzjnt/Thumbnail-1.jpg" alt="Cover" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+<img src="https://i.ibb.co/KTRz4gf/Thumbnail.jpg" alt="Cover" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
 
 > Современный многостраничный сайт агентства недвижимости с элегантным дизайном и интерактивными элементами
 
