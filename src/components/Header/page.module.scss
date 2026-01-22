@@ -1,0 +1,16 @@
+.header {
+  background: var(--grey-10);
+}
+
+.container {
+  height: rem(99);
+  padding-block: rem(20);
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

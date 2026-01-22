@@ -1,0 +1,12 @@
+.logo {
+  width: rem(160);
+  height: rem(49);
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+

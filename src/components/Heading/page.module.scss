@@ -1,0 +1,38 @@
+.heading {
+  margin-bottom: rem(76);
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.stars {
+  display: inline-block;
+  width: rem(69);
+  height: rem(30);
+  margin-bottom: rem(11);
+  margin-left: rem(-20);
+  width: rem(69);
+  height: rem(30);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.title {
+  margin-bottom: rem(12);
+}
+.description {
+  color: var(--grey-60);
+  max-width: rem(1200);
+}
+
+.button {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

@@ -1,0 +1,62 @@
+.button {
+  @include reset-btn;
+  padding: rem(18) rem(24);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-500);
+  border: 1px solid transparent;
+  border-radius: rem(10);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--grey-08);
+    border-color: var(--grey-15);
+  }
+
+  &.active {
+    background: var(--grey-08);
+    border-color: var(--grey-15);
+
+    &:hover {
+      background: var(--grey-08);
+      border-color: var(--grey-15);
+    }
+  }
+
+  &.primary {
+    background: var(--purple-60);
+
+    &:hover {
+      background: #8b57f8;
+      box-shadow: 0 8px 20px rgba(112, 59, 247, 0.3);
+    }
+
+    &:active {
+      box-shadow: 0 4px 10px rgba(112, 59, 247, 0.2);
+    }
+  }
+
+  &.outline {
+    background: var(--grey-08);
+    border-color: var(--grey-15);
+
+    &:hover {
+      background: var(--grey-15);
+      border-color: var(--grey-60);
+    }
+  }
+
+  &.secondary {
+    background: var(--grey-10);
+    border-color: var(--grey-15);
+
+    &:hover {
+      background: var(--grey-15);
+      border-color: var(--grey-60);
+    }
+  }
+
+  &.fulled {
+    width: 100%;
+  }
+}

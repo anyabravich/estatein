@@ -1,0 +1,90 @@
+.card {
+  padding: rem(40);
+  border-radius: rem(12);
+  height: 100%;
+  border: 1px solid var(--grey-15);
+  display: flex;
+  flex-direction: column;
+}
+
+.image-wrapper {
+  aspect-ratio: 432 / 318;
+  position: relative;
+  border-radius: rem(10);
+  overflow: hidden;
+  margin-bottom: rem(30);
+}
+
+.title {
+  font-size: var(--font-size-24);
+  margin-bottom: rem(6);
+}
+
+.description {
+  margin-bottom: rem(30);
+}
+
+.description-text {
+  overflow: hidden;
+  color: var(--grey-60);
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  &.showed {
+    -webkit-line-clamp: unset;
+  }
+}
+
+.read-more {
+  @include reset-btn;
+  display: inline-block;
+  margin-top: rem(10);
+}
+
+.components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(10);
+  margin-bottom: rem(30);
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+  border-radius: rem(28);
+  padding: rem(8) rem(12);
+  background: var(--grey-10);
+  border: 1px solid var(--grey-15);
+  white-space: nowrap;
+}
+
+.component-icon {
+  --size: #{rem(24)};
+  width: var(--size);
+  height: var(--size);
+}
+
+.footer {
+  display: flex;
+  gap: rem(50);
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  color: var(--grey-60);
+  margin-bottom: rem(2);
+}
+
+.price-value {
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: var(--font-size-24);
+}

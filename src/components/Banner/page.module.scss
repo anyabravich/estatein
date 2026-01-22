@@ -1,0 +1,45 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: rem(10);
+  height: rem(63);
+  background: var(--grey-10);
+  border-bottom: 1px solid var(--grey-15);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-500);
+  &._hidden {
+    display: none;
+  }
+  &__button-close {
+    @include reset-btn;
+    --size: #{rem(32)};
+    --icon-size: #{rem(24)};
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    right: rem(32);
+    background: var(--white-10);
+    border-radius: 100vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    img {
+      width: var(--icon-size);
+      height: var(--icon-size);
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/lines.svg") no-repeat center center / cover;
+    opacity: 0.4;
+  }
+}

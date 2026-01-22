@@ -1,0 +1,60 @@
+.possibility {
+  position: relative;
+  background: var(--grey-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: rem(40) rem(20);
+  gap: rem(20);
+  border-radius: rem(12);
+  border: 1px solid var(--grey-15);
+  height: 100%;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: var(--grey-60);
+
+    .arrow {
+      transform: translate(rem(4), rem(-4));
+    }
+
+    .image {
+      transform: scale(1.15);
+    }
+  }
+
+  .arrow {
+    --size: #{rem(32)};
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: rem(20);
+    right: rem(20);
+    transition: transform 0.3s ease;
+  }
+
+  .imageWrapper {
+    --size: #{rem(82)};
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/images/possibilities/circle-decor.svg") no-repeat center /
+      contain;
+  }
+
+  .image {
+    --size: #{rem(32)};
+    width: var(--size);
+    height: var(--size);
+    transition: transform 0.3s ease;
+  }
+
+  .text {
+    font-size: var(--font-size-20);
+    line-height: 1.5;
+  }
+}

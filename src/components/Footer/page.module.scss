@@ -1,0 +1,116 @@
+.footer {
+  .main {
+    .container {
+      display: grid;
+      gap: rem(80);
+      padding-block: rem(100);
+      grid-template-columns: rem(538) 1fr;
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .content {
+      display: flex;
+      gap: rem(30);
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    width: rem(160);
+    height: rem(49);
+  }
+
+  .menu {
+    display: flex;
+    gap: rem(100);
+    @media (max-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item {
+      letter-spacing: -0.108px;
+      margin-bottom: rem(16);
+      &:first-child {
+        color: var(--grey-60);
+        margin-bottom: rem(26);
+        letter-spacing: -0.12px;
+        font-size: var(--font-size-20);
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding-block: rem(26);
+    background: var(--grey-10);
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: $tablet) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .information {
+    display: flex;
+    gap: rem(38);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+      gap: rem(10);
+    }
+
+    span {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    gap: rem(10);
+    @media (max-width: $tablet) {
+      order: -1;
+    }
+
+    .item {
+      --size: #{rem(52)};
+      width: var(--size);
+      height: var(--size);
+      background: var(--grey-08);
+      border-radius: 100vmax;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      img {
+        --size: #{rem(24)};
+        width: var(--size);
+        height: var(--size);
+      }
+    }
+  }
+}

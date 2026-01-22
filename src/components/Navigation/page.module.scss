@@ -1,0 +1,12 @@
+.nav {
+  margin-inline: auto;
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+

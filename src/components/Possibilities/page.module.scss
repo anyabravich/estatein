@@ -1,0 +1,10 @@
+.possibilities {
+  display: grid;
+  gap: rem(20);
+  padding-inline: rem(20);
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: rem(126);
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

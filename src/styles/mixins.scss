@@ -1,0 +1,30 @@
+@use "sass:math";
+
+@function rem($px, $context: 16) {
+  @return calc(math.round(calc($px / $context) * 1rem * 10000) / 10000);
+}
+
+@mixin reset-btn {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: inherit;
+  background: 0;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@function vw($px, $width: 1920) {
+  @return calc(math.round(math.div($px, $width) * 100vw * 10000) / 10000);
+}
+
+@mixin letter-spacing-em($letter-spacing-px, $font-size-px) {
+  $letter-spacing-em: calc($letter-spacing-px / $font-size-px);
+  letter-spacing: #{$letter-spacing-em}em;
+}
+
+@mixin lineHeight($line-height-px, $font-size-px) {
+  $line-height-em: calc($line-height-px / $font-size-px);
+  line-height: #{$line-height-em};
+}

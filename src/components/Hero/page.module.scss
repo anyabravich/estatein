@@ -1,0 +1,41 @@
+.hero {
+  margin-bottom: rem(20);
+  &__container {
+    display: grid;
+    gap: rem(80);
+    align-items: flex-start;
+    grid-template-columns: rem(758) 1fr;
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: initial;
+    }
+  }
+  &__image {
+    height: rem(814);
+    position: relative;
+    margin-right: calc(var(--container-padding) * -1);
+  }
+  &__text-content {
+    padding-block: rem(144) rem(140);
+  }
+  &__title {
+    margin-bottom: rem(24);
+  }
+  &__description {
+    margin-bottom: rem(60);
+    color: var(--grey-60);
+  }
+  &__buttons {
+    display: flex;
+    gap: rem(20);
+    margin-bottom: rem(60);
+  }
+  &__info {
+    display: flex;
+    gap: rem(20);
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
+  }
+}
